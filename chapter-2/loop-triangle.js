@@ -7,10 +7,15 @@ const loopTriangle = (loops) => {
       triangle += '#';
     }
 
+    // stop newline being added to triangle when loop complete
+    if (i === loops - 1) {
+      break;
+    }
+
     counter++;
     triangle += '\n';
   }
   return triangle;
 };
 
-console.log(loopTriangle(3));
+console.log(loopTriangle(10));
