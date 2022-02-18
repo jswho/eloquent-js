@@ -1,12 +1,15 @@
-let triangle = '';
-let counter = 1;
+const loopTriangle = () => {
+  let triangle = '';
+  let counter = 1;
 
-for (let i = 0; i < 7; i++) {
-  for (let j = 0; j < counter; j++) {
-    triangle += '#';
+  for (let i = 0; i < 7; i++) {
+    for (let j = 0; j < counter; j++) {
+      triangle += '#';
+    }
+    counter++;
+    triangle += '\n';
   }
-  counter++;
-  triangle += '\n';
-}
+  return triangle;
+};
 
-console.log(triangle);
+console.log(loopTriangle());
