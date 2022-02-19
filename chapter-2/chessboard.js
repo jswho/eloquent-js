@@ -11,7 +11,10 @@ const chessboard = () => {
   let grid = '';
   let size = 8;
 
-  grid += addLine(size);
+  for (let i = 0; i < size; i++) {
+    grid += addLine(size);
+  }
+
   return grid;
 };
 
@@ -21,6 +24,7 @@ const addLine = (size) => {
   while (line.length < size) {
     line += '#';
   }
+  line += '\n';
   return line;
 };
 
