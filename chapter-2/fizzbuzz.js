@@ -5,6 +5,10 @@
 - Numbers divisbible by 3 and 5, print "FizzBuzz"
 */
 
-const fizzbuzz = () => {};
+const fizzbuzz = () => {
+  for (let number = 1; number <= 100; number++) {
+    console.log(number);
+  }
+};
 
 console.log(fizzbuzz());
