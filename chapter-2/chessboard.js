@@ -11,6 +11,7 @@ const chessboard = (firstSymbol, secondSymbol, size = 8) => {
   let grid = '';
 
   for (let i = 0; i < size; i++) {
+    // Alternates the symbols for each new line
     if (i % 2 === 0) {
       grid += addLine(size, firstSymbol, secondSymbol);
     } else {
