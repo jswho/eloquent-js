@@ -18,7 +18,7 @@ const chessboard = (firstSymbol, secondSymbol, size = 8) => {
     }
   }
 
-  return grid;
+  return grid.trimEnd();
 };
 
 const addLine = (size, firstSymbol, secondSymbol) => {
@@ -31,4 +31,4 @@ const addLine = (size, firstSymbol, secondSymbol) => {
   return line;
 };
 
-console.log(chessboard(' ', '#', 4));
+console.log(chessboard(' ', '#'));
