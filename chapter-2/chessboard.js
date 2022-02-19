@@ -12,17 +12,21 @@ const chessboard = () => {
   let size = 8;
 
   for (let i = 0; i < size; i++) {
-    grid += addLine(size);
+    if (i % 2 === 0) {
+      grid += addLine(size, '#', '-');
+    } else {
+      grid += addLine(size, '-', '#');
+    }
   }
 
   return grid;
 };
 
-const addLine = (size) => {
+const addLine = (size, firstSymbol, secondSymbol) => {
   let line = '';
 
   while (line.length < size) {
-    line += '#';
+    line += line.length % 2 === 0 ? firstSymbol : secondSymbol;
   }
   line += '\n';
   return line;
