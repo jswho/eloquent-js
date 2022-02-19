@@ -1,3 +1,3 @@
-# [Eloquent JavaScript](https://eloquentjavascript.net/index.html)
+# Eloquent JavaScript
 
-As I read this book, I will attempt the challenges and use this space to save my solutions and notes.
+As I read [Eloquent JavaScript](https://eloquentjavascript.net/index.html), I will attempt the challenges and use this space to save my solutions and notes.
