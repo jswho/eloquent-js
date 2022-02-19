@@ -7,15 +7,14 @@
   * change alternating symbols
 */
 
-const chessboard = () => {
+const chessboard = (firstSymbol, secondSymbol, size = 8) => {
   let grid = '';
-  let size = 8;
 
   for (let i = 0; i < size; i++) {
     if (i % 2 === 0) {
-      grid += addLine(size, '#', '-');
+      grid += addLine(size, firstSymbol, secondSymbol);
     } else {
-      grid += addLine(size, '-', '#');
+      grid += addLine(size, secondSymbol, firstSymbol);
     }
   }
 
@@ -32,4 +31,4 @@ const addLine = (size, firstSymbol, secondSymbol) => {
   return line;
 };
 
-console.log(chessboard());
+console.log(chessboard(' ', '#', 4));
