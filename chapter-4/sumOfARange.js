@@ -16,4 +16,14 @@ const range = (start, end) => {
   return numbers;
 };
 
-console.log(range(1, 10));
+const sum = (numbers) => {
+  let value = 0;
+
+  for (number of numbers) {
+    value += number;
+  }
+  return value;
+};
+
+// console.log(range(1, 10));
+console.log(sum(range(1, 10)));
