@@ -1,24 +1,16 @@
 /*
-- Return a number, that has counted the number of uppercase "B"'s in the string
-
-Reflection
-Recursion is probably not the best solution to go with here. It seems long and a little unreadable.
-A for loop would have been better, simpler and easier to follow.
-However, I'm still glad I've just spent the last few hours messing around with recursion to better understand it.
-I've also learned to use a caching (memoization) function to store the count.
+Code has been refactored to take in to consideration a second argument, char.
 */
 
-const countBs = (str) => {
-  const checkB = 'B';
-
-  if (str[str.length - 1] === checkB) {
+const countChar = (str, char) => {
+  if (str[str.length - 1] === char) {
     counter();
   }
 
   if (str.length === 0) {
     return counter(true);
   } else {
-    return countBs(str.substring(0, str.length - 1));
+    return countChar(str.substring(0, str.length - 1), char);
   }
 };
 
@@ -35,7 +27,4 @@ const count = () => {
 };
 const counter = count();
 
-// console.log(countBs('ABC')); // 1
-// console.log(countBs('ABBXSC')); // 2
-console.log(countBs('NBBSAB')); // 3
-// console.log(countBs('NQW')); // 0
+console.log(countChar('kadklpe', 'k')); // 2
