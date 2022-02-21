@@ -18,7 +18,26 @@ const reverseArray = (array) => {
   return newArray;
 };
 
-const reverseArrayInPlace = (array) => {};
+const reverseArrayInPlace = (array) => {
+  const lengthOfOriginalArray = array.length;
 
-console.log(reverseArray(['A', 'B', 'C'])); // ["C", "B", "A"]
-// console.log(reverseArrayInPlace([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+  array = appendToArray(array);
+
+  for (let i = 0; i < lengthOfOriginalArray; i++) {
+    array[i] = array.pop();
+  }
+
+  return array;
+};
+
+const appendToArray = (array) => {
+  const arrayLength = array.length;
+  for (let i = 0; i < arrayLength; i++) {
+    array.unshift(null);
+  }
+
+  return array;
+};
+
+// console.log(reverseArray(['A', 'B', 'C'])); // ["C", "B", "A"]
+console.log(reverseArrayInPlace([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
