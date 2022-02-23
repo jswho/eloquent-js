@@ -1,9 +1,16 @@
 /*
-Using the reduce and concat methods, to flatten a multi array in to a single array.
+Use the reduce and concat methods, to flatten a multi array into a single array.
 */
 
 const flatten = (multiArray) => {
-  return;
+  return multiArray.reduce((flattened, currentValue) => {
+    // check if current element is an array
+    if (Array.isArray(currentValue)) {
+      return flatten(flattened.concat(currentValue));
+    } else {
+      return flattened.concat(currentValue);
+    }
+  }, []);
 };
 
 console.log(flatten([[1, 2, 3], [4, 5], [6]])); // [1,2,3,4,5,6]
