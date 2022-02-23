@@ -5,11 +5,9 @@ Use the reduce and concat methods, to flatten a multi array into a single array.
 const flatten = (multiArray) => {
   return multiArray.reduce((flattened, currentValue) => {
     // check if current element is an array
-    if (Array.isArray(currentValue)) {
-      return flatten(flattened.concat(currentValue));
-    } else {
-      return flattened.concat(currentValue);
-    }
+    return Array.isArray(currentValue)
+      ? flatten(flattened.concat(currentValue))
+      : flattened.concat(currentValue);
   }, []);
 };
 
