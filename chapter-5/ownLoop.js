@@ -2,7 +2,13 @@
 Develop own loop function
 */
 
-const loop = (value, test, update, body) => {};
+const loop = (value, test, update, body) => {
+  console.log(test(value));
+};
+
+const test = (value) => {
+  return value > 0;
+};
 
 console.log(
   loop(
